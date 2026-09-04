@@ -1,1 +1,1 @@
-echo "# Python To-Do App"
+# Python To-Do App
