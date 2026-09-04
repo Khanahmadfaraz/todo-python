@@ -1,20 +1,19 @@
-todos = []
+def delete_todo():
+    show_todos()
 
+    if not todos:
+        return
 
-def add_todo():
-    title = input("Enter todo: ")
+    try:
+        todo_id = int(input("\nEnter todo ID to delete: "))
 
-    todo = {
-        "id": len(todos) + 1,
-        "title": title,
-        "completed": False
-    }
+        for todo in todos:
+            if todo["id"] == todo_id:
+                todos.remove(todo)
+                print("Todo deleted successfully!")
+                return
 
-    todos.append(todo)
+        print("Todo not found.")
 
-    print("Todo added successfully!")
-
-
-add_todo()
-
-print(todos)
+    except ValueError:
+        print("Please enter a valid ID.")
