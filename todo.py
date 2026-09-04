@@ -16,7 +16,7 @@ def add_todo():
 
     todos.append(todo)
 
-    print("✅ Todo added successfully!")
+    print(" Todo added successfully!")
 
 
 def show_todos():
@@ -29,7 +29,7 @@ def show_todos():
 
     for todo in todos:
 
-        status = "✅ Completed" if todo["completed"] else "⏳ Pending"
+        status = " Completed" if todo["completed"] else "⏳ Pending"
 
         print(
             f'{todo["id"]}. {todo["title"]} - {status}'
@@ -58,16 +58,16 @@ def update_todo():
 
                 if new_title:
                     todo["title"] = new_title
-                    print("✅ Todo updated successfully!")
+                    print(" Todo updated successfully!")
                 else:
-                    print("❌ Title cannot be empty.")
+                    print(" Title cannot be empty.")
 
                 return
 
-        print("❌ Todo not found.")
+        print(" Todo not found.")
 
     except ValueError:
-        print("❌ Please enter a valid ID.")
+        print(" Please enter a valid ID.")
 
 
 def complete_todo():
@@ -86,14 +86,14 @@ def complete_todo():
 
                 todo["completed"] = True
 
-                print("✅ Todo completed!")
+                print(" Todo completed!")
 
                 return
 
-        print("❌ Todo not found.")
+        print(" Todo not found.")
 
     except ValueError:
-        print("❌ Please enter a valid ID.")
+        print(" Please enter a valid ID.")
 
 
 def delete_todo():
@@ -116,10 +116,10 @@ def delete_todo():
 
                 return
 
-        print("❌ Todo not found.")
+        print(" Todo not found.")
 
     except ValueError:
-        print("❌ Please enter a valid ID.")
+        print(" Please enter a valid ID.")
 
 
 def main():
@@ -163,7 +163,7 @@ def main():
             break
 
         else:
-            print("❌ Invalid choice.")
+            print(" Invalid choice.")
 
 
 if __name__ == "__main__":
